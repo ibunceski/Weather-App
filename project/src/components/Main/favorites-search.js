@@ -14,7 +14,7 @@ const FavoritesSearch = (props) => {
         if(inputValue.length < 1) return Promise.resolve({options: []});
         else{
         return fetch(
-            `${GEODB_API_URL}?namePrefix=${inputValue}`, GEODB_API_OPTIONS
+            `${GEODB_API_URL}&namePrefix=${inputValue}`, GEODB_API_OPTIONS
         )
         .then((res) => res.json())
         .then((data) =>{
